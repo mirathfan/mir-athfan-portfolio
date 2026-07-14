@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Mir Athfan Ali | Full-Stack AI Engineer",
   description:
-    "Portfolio for Mir Athfan Ali, a Full-Stack AI Engineer building AI products across mobile, backend, agents, vector search, and recommendation systems.",
+    "Mir Athfan Ali is a Full-Stack AI Engineer building mobile applications, AI agents, retrieval systems, production backends, and ML performance tooling.",
   keywords: [
     "Mir Athfan Ali",
     "Full-Stack AI Engineer",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mir Athfan Ali | Full-Stack AI Engineer",
     description:
-      "Full-stack AI portfolio featuring AURA, AI application projects, PyTorch performance work, and full-stack engineering skills.",
+      "Portfolio featuring AURA, Forge, LLM training performance work, GPU inference benchmarking, and full-stack AI engineering projects.",
     type: "website",
     images: [{ url: "/og-image.svg" }],
   },
@@ -41,6 +41,9 @@ export const metadata: Metadata = {
     description:
       "I build real AI products end-to-end across mobile, backend, AI agents, vector search, and recommendation systems.",
     images: ["/og-image.svg"],
+  },
+  alternates: {
+    canonical: "/",
   },
 };
 
