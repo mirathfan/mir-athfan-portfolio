@@ -76,7 +76,7 @@ export const profile = {
   auraWebsite: "https://aurastylist.framer.website/",
   auraRepo: "https://github.com/mirathfan/AURA",
   resume: "/Mir_Athfan_Ali_AI_ML_Resume.pdf",
-  photo: null as string | null,
+  photo: "/mir-athfan.jpeg",
 };
 
 export const navItems = [
