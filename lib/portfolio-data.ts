@@ -100,7 +100,7 @@ export const heroMetrics: Metric[] = [
     detail: "1,120 MB baseline to 533 MB optimized",
   },
   {
-    label: "Mobile product shipped",
+    label: "Mobile beta distribution",
     value: "TestFlight",
     detail: "AURA end-to-end AI styling platform",
   },
@@ -161,7 +161,7 @@ export const featuredProjects: FeaturedProject[] = [
   {
     slug: "aura",
     title: "AURA - AI Personal Stylist",
-    status: "TestFlight release / active development",
+    status: "TestFlight beta distribution · Active development",
     category: "AI mobile product",
     summary:
       "A mobile AI styling platform that turns a real wardrobe into personalized outfit recommendations using wardrobe embeddings, vector retrieval, structured agents, and long-term style feedback.",
@@ -183,8 +183,8 @@ export const featuredProjects: FeaturedProject[] = [
     metrics: [
       { label: "Release path", value: "TestFlight" },
       { label: "Agent workflow", value: "10 nodes" },
-      { label: "Eval harness", value: "23 golden cases" },
-      { label: "Closet validity", value: "0 hallucinated items", detail: "Across the current eval suite" },
+      { label: "Grounding", value: "Item validation", detail: "Checks closet membership and repairs invalid recommendations." },
+      { label: "Evaluation", value: "Not reported", detail: "No dated evaluation report is linked here; a zero-hallucination result is not claimed." },
     ],
     highlights: [
       "Built closet-grounded outfit generation with validate-and-repair logic for item membership and role canonicalization.",
@@ -295,7 +295,7 @@ export const featuredProjects: FeaturedProject[] = [
         {
           title: "Current status and next steps",
           body:
-            "AURA is in active development with a TestFlight release path. Next work focuses on improving personalization loops, expanding shopping recommendation quality, and continuing reliability work around expensive AI operations.",
+            "AURA remains in active development. TestFlight is beta distribution, not a public App Store or production launch. This portfolio does not establish current external-beta availability. Dated evaluation evidence is needed before reporting suite size or hallucination results.",
         },
       ],
     },
@@ -606,6 +606,15 @@ export const featuredProjects: FeaturedProject[] = [
 
 export const additionalProjects: AdditionalProject[] = [
   {
+    title: "CareerCompiler",
+    category: "Local-first AI desktop app · Supervised beta",
+    summary: "Built resume tailoring with source-fact citations, validation, and review before PDF export. React and Tauri/Rust power the desktop app; SQLite stores career evidence and resume versions locally.",
+    stack: ["React", "TypeScript", "Tauri", "Rust", "SQLite"],
+    metrics: [],
+    highlights: ["Generated bullets cite candidate evidence and require review.", "Versioned resumes and application records remain local by default."],
+    links: [],
+  },
+  {
     title: "EfficientFormer vs ResNet18",
     category: "Computer vision",
     summary:
@@ -648,7 +657,7 @@ export const experiences: Experience[] = [
     company: "AURA, KASAT Labs",
     dates: "October 2025 - Present",
     bullets: [
-      "Designed and shipped an AI-powered mobile styling platform from concept through TestFlight distribution.",
+      "Built an AI styling mobile app from concept through TestFlight beta distribution.",
       "Built the React Native application, Firebase backend, Cloud Functions, storage workflows, vector retrieval, recommendation engine, and LangGraph-based styling agent.",
       "Developed multimodal wardrobe ingestion, outfit recommendation cards, wardrobe intelligence, personalized shopping, style feedback, saved looks, and calendar wear tracking.",
       "Implemented privacy controls, account deletion, rate limiting, AI usage gating, quota controls, fallbacks, and error handling.",

@@ -1,0 +1,40 @@
+[
+  {
+    "width": 1440,
+    "layout": {
+      "height": 4227,
+      "experience": 573,
+      "contact": 3838
+    },
+    "errors": [],
+    "reducedMotion": "passed",
+    "hoverFocus": "passed"
+  },
+  {
+    "width": 400,
+    "layout": {
+      "height": 7447,
+      "experience": 902,
+      "contact": 6914
+    },
+    "errors": [],
+    "reducedMotion": "passed",
+    "hoverFocus": "passed"
+  },
+  {
+    "fallback": "no-js",
+    "visible": true
+  },
+  {
+    "fallback": "no-observer",
+    "visible": true
+  },
+  {
+    "fallback": "observer-throws",
+    "visible": true
+  },
+  {
+    "touchHover": "no movement",
+    "mobileMenu": "passed"
+  }
+]

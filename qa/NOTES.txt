@@ -1,0 +1,43 @@
+Local portfolio review verification
+
+Preview: http://127.0.0.1:3011
+These implementation and animation QA records were captured before publishing approval.
+The checkout was clean before implementation.
+
+Passed: npm run typecheck; npm run build; git diff --check.
+No standalone lint or unit-test scripts/configuration exist in this repository.
+The Next build completed its configured lint/type validation stage.
+
+Browser: isolated headless Chrome with a temporary profile, separate from the
+user's active Chrome session. Run qa/portfolio-check.cjs with a locally installed Playwright runtime.
+PLAYWRIGHT_MODULE can select another available module path, and
+CHROME_EXECUTABLE can select an installed Chrome. Neither requires changing source.
+Checks: 1440, 400, 320px widths; horizontal overflow; mobile menu Enter/Tab/Escape;
+section focus; repeated screenshot opening; modal Tab, Close, Escape, restored
+focus and scroll lock; browser Back and reopening; five case-study routes.
+Screenshots were inspected at /tmp/portfolio-1440.png and /tmp/portfolio-400.png.
+Raw measured results and link response statuses: qa/results.json.
+LinkedIn returned 999 (automated-request restriction), so verification is limited.
+
+CareerCompiler source evidence (read only):
+/Users/athfan/Desktop/career-compiler/README.md
+Architecture and Core Capabilities confirm React/TypeScript, Tauri/Rust, SQLite,
+source-fact citations, validation, resume versioning, review-first generation,
+and supervised beta status. No adoption or business outcomes are claimed.
+
+AURA: No dated evaluation report was located in this checkout or the reviewed
+local source locations. Removed numerical suite-size and zero-hallucination
+claims rather than inventing test evidence. TestFlight distribution is clearly
+identified as beta; current external beta availability is not asserted.
+
+Subtle motion follow-up:
+- Hero: 480ms text / 600ms portrait entrance, 8px movement, starts at 80% opacity.
+- Project cards: one-time 420ms entry reveal using native IntersectionObserver
+  and Web Animations; no animation dependency or hidden pre-animation state.
+- Pointer hover: 1px button lift / 2px card lift; touch movement disabled.
+- Reduced-motion disables entrances/reveals/lifts and cancels active reveals.
+- Focusing a card's link cancels its active reveal for stable keyboard access.
+Passed motion QA at 1440 and 400px, static fallbacks with JavaScript disabled,
+observer absent/throwing, live reduced-motion change, touch menu and hover,
+unchanged section geometry, and all existing 1440/400/320px browser checks.
+Final motion evidence: qa/motion-results.json; test: qa/motion-check.cjs.

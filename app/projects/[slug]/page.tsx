@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { ScreenshotGallery } from "../../components/screenshot-gallery";
 import { notFound } from "next/navigation";
 import {
   ArrowLeft,
@@ -152,25 +152,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             <p className="section-eyebrow">Product proof</p>
             <h2 className="text-3xl font-semibold text-white">Real app surfaces</h2>
           </div>
-          <div className="aura-rail">
-            {project.screenshots.map((screen, index) => (
-              <figure key={screen.src} className="phone-shot">
-                <div className="relative aspect-[1320/2868] overflow-hidden rounded-md bg-black">
-                  <Image
-                    src={screen.src}
-                    alt={screen.alt}
-                    fill
-                    priority={index < 2}
-                    sizes="(min-width: 1024px) 170px, (min-width: 640px) 28vw, 42vw"
-                    className="object-cover object-top"
-                  />
-                </div>
-                <figcaption className="px-1.5 py-2 text-xs font-medium text-slate-300">
-                  {screen.title}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
+          <ScreenshotGallery screenshots={project.screenshots} />
         </section>
       ) : null}
 
@@ -188,7 +170,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <h3 className="text-xl font-semibold text-white">Problem</h3>
               <p className="mt-3 text-sm leading-7 text-slate-300">{project.problem}</p>
             </article>
-            {project.caseStudy.sections.map((section) => (
+            {project.caseStudy.sections.filter((section) => section.title !== "Problem").map((section) => (
               <article key={section.title} className="timeline-card">
                 <h3 className="text-xl font-semibold text-white">{section.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-slate-300">{section.body}</p>
